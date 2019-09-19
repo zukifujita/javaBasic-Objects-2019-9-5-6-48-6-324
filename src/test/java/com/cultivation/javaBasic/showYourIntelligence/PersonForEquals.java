@@ -2,6 +2,7 @@ package com.cultivation.javaBasic.showYourIntelligence;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.List;
 import java.util.Objects;
 
 @SuppressWarnings("unused")
@@ -36,6 +37,13 @@ public class PersonForEquals {
     public boolean equals(Object obj) {
         // TODO: please modify the following code to pass the test
         // <--start
+        if (obj == null) {
+            return false;
+        } else if (obj.equals(getName())) {
+            return true;
+        } else if () {
+            return false;
+        }
         throw new NotImplementedException();
         // --end-->
     }

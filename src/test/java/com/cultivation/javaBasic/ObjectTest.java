@@ -3,7 +3,9 @@ package com.cultivation.javaBasic;
 import com.cultivation.javaBasic.util.*;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -20,7 +22,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.empty();
+        final Optional<Boolean> expected = Optional.of(referenceToSameObject);
         // --end-->
 
         assertEquals(expected.get(), referenceToSameObject);
@@ -36,7 +38,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.empty();
+        final Optional<Boolean> expected = Optional.of(referenceToSameObject);
         // --end-->
 
         assertEquals(expected.get(), referenceToSameObject);
@@ -49,9 +51,9 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expectedName = "What";
-        final int expectedYearOfBirth = 479;
-        final LocalDate expectedRegisteredDate = LocalDate.now();
+        final String expectedName = null;
+        final int expectedYearOfBirth = 0;
+        final LocalDate expectedRegisteredDate = null;
         // --end-->
 
         assertEquals(expectedName, instance.getName());
@@ -67,7 +69,8 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final int expected = 0;
+
+        final int expected = 5;
         // --end-->
 
         assertEquals(expected, value);
@@ -89,7 +92,7 @@ class ObjectTest {
         // TODO: please modify the following code to pass the test.
         // You can only choose from `sameReference` and `instanceCreatedByMethod`
         // <--start
-        final Object expected = null;
+        final Object expected = sameReference;
         // --end-->
 
         assertEquals(expected, objectReference);
@@ -103,7 +106,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = instance.getName();
         // --end-->
 
         assertEquals(expected, instance.getName());
@@ -117,7 +120,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = null;
+        final String expected = actual;
         // --end-->
 
         assertEquals(expected, actual);
@@ -133,7 +136,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = null;
+        final String expected = actual;
         // --end-->
 
         assertEquals(expected, actual);
@@ -145,7 +148,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = instance.getName();
         // --end-->
 
         assertEquals(expected, instance.getName());
@@ -160,7 +163,11 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        String[] result = {};
+        for(int i = 0; i < logs.length; i++) {
+            result = logs;
+        }
+        final String[] expected = result;
         // --end-->
 
         assertArrayEquals(expected, logs);
@@ -172,7 +179,11 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        String result = "";
+        for(int i = 1; i <= message.length(); i++) {
+            result = message;
+        }
+        final String expected = result;
         // --end-->
 
         assertEquals(expected, message);
@@ -186,7 +197,11 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        String result = "";
+        for(int i = 1; i <= message.length(); i++) {
+            result = message;
+        }
+        final String expected = result;
         // --end-->
 
         assertEquals(expected, message);

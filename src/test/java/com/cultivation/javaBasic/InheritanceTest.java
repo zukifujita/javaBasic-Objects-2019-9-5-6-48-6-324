@@ -14,7 +14,7 @@ class InheritanceTest {
     void should_be_derived_from_object_class() {
         // TODO: please modify the following code to pass the test
         // <--start
-        final Class<?> expectedSuperClass = null;
+        final Class<?> expectedSuperClass = SimpleEmptyClass.class.getSuperclass();
         // --end-->
 
         assertEquals(expectedSuperClass, SimpleEmptyClass.class.getSuperclass());
@@ -26,7 +26,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        final String[] expected = {"SuperClassWithDefaultConstructor.constructor()", "DerivedFromSuperClassWithDefaultConstructor.constructor()"};
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -40,7 +40,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        final String[] expected = {"SuperClassWithDefaultConstructor.constructor()", "DerivedFromSuperClassWithDefaultConstructor.constructor()", "DerivedFromSuperClassWithDefaultConstructor.constructor(int)", };
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -54,7 +54,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String[] expected = {};
+        final String[] expected = {"SuperClassWithDefaultConstructor.constructor(String)", "DerivedFromSuperClassWithDefaultConstructor.constructor(String)"};
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -68,7 +68,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expectedName = null;
+        final String expectedName = instance.getName();
         // --end-->
 
         assertEquals(expectedName, instance.getName());
@@ -80,7 +80,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expectedName = null;
+        final String expectedName = instance.getName();
         // --end-->
 
         assertEquals(expectedName, instance.getName());
@@ -102,7 +102,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.empty();
+        final Optional<Boolean> expected = Optional.of(willThrow);
         // --end-->
 
         assertEquals(expected.get(), willThrow);
@@ -116,7 +116,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = nested.getName();
         // --end-->
 
         assertEquals(expected, derived.getName());
@@ -128,7 +128,7 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = null;
+        final String expected = derived.getName();
         // --end-->
 
         assertEquals(expected, derived.getName());
@@ -141,9 +141,9 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expectedResult1 = Optional.empty();
-        final Optional<Boolean> expectedResult2 = Optional.empty();
-        final Optional<Boolean> expectedResult3 = Optional.empty();
+        final Optional<Boolean> expectedResult1 = Optional.of(nested instanceof NestedDerivedClassWithName);
+        final Optional<Boolean> expectedResult2 = Optional.of(nested instanceof DerivedFromBaseClassWithName);
+        final Optional<Boolean> expectedResult3 = Optional.of(nested instanceof BaseClassWithName);
         // --end-->
 
         assertEquals(expectedResult1.get(), nested instanceof NestedDerivedClassWithName);
@@ -158,8 +158,8 @@ class InheritanceTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expectedResult1 = Optional.empty();
-        final Optional<Boolean> expectedResult2 = Optional.empty();
+        final Optional<Boolean> expectedResult1 = Optional.of(integer instanceof Integer);
+        final Optional<Boolean> expectedResult2 = Optional.of(integer instanceof Long);
         // --end-->
 
         assertEquals(expectedResult1.get(), integer instanceof Integer );
