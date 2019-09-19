@@ -41,9 +41,10 @@ public class PersonForEquals {
             return false;
         } else if (obj.equals(getName())) {
             return true;
-        } else if () {
-            return false;
         }
+//        else if () {
+//            return false;
+//        }
         throw new NotImplementedException();
         // --end-->
     }

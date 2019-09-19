@@ -106,7 +106,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = instance.getName();
+        final String expected = "Updated Name";
         // --end-->
 
         assertEquals(expected, instance.getName());
@@ -120,7 +120,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = actual;
+        final String expected = "methodWithOneParameter(Object)";
         // --end-->
 
         assertEquals(expected, actual);
@@ -136,7 +136,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = actual;
+        final String expected = "methodWithTwoParameters(String, Integer)";
         // --end-->
 
         assertEquals(expected, actual);
@@ -148,7 +148,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = instance.getName();
+        final String expected = "Untitled";
         // --end-->
 
         assertEquals(expected, instance.getName());

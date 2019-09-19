@@ -5,7 +5,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 @SuppressWarnings("unused")
 public class StringFormatException extends Exception {
     public StringFormatException(String message) {
-        // TODO:    please modify the following code to pass the test
+        // TODO: please modify the following code to pass the test
         // <--start
         super(message);
         if(message != "the message") {
