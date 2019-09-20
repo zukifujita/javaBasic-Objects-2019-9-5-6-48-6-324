@@ -16,9 +16,24 @@ Each repository contains a gradle java project with a number of unit tests. The 
 The 4 questions are:
 
 1. What is the knowledge point of the test? Where is the offical document to the knowledge point?
+
+ExceptionTest - handling of exceptions.
+
+InheritanceTest - know the parent class
+
+ObjectTest - instantiation of an object
+
 1. Why the test failed at first?
+
+The test cases failed at first because some of them have an actual value the parent class.
+
 1. Why you corrected the test that way?
+
+After knowing the parent class, you will be able to know what is the actual value. Therefore, you should be able to set the value from the expected variable.
+
 1. Do you have further questions on this knowledge point?
+
+None.
 
 ## Example
 
