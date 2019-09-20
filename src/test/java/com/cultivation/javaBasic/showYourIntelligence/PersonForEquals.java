@@ -69,8 +69,6 @@ public class PersonForEquals {
         }
 
         throw new NotImplementedException();
-
-//        throw new NotImplementedException();
         // --end-->
     }
 }
