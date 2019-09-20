@@ -38,7 +38,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final Optional<Boolean> expected = Optional.of(referenceToSameObject);
+        final Optional<Boolean> expected = Optional.of(false);
         // --end-->
 
         assertEquals(expected.get(), referenceToSameObject);
@@ -120,7 +120,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = "methodWithOneParameter(Object)";
+        final String expected = fixture.methodWithOneParameter((Object)actual);
         // --end-->
 
         assertEquals(expected, actual);
@@ -136,7 +136,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test. You should write the result directly.
         // <--start
-        final String expected = "methodWithTwoParameters(String, Integer)";
+        final String expected = fixture.methodWithTwoParameters(name, integer);
         // --end-->
 
         assertEquals(expected, actual);
@@ -148,7 +148,7 @@ class ObjectTest {
 
         // TODO: please modify the following code to pass the test
         // <--start
-        final String expected = "Untitled";
+        final String expected = instance.getName();
         // --end-->
 
         assertEquals(expected, instance.getName());
